@@ -27,7 +27,7 @@ export default function ProductDetail({ product, onBack, onConfigure }: ProductD
             <img 
               src={product.imageUrl} 
               alt={product.name} 
-              className="w-full h-[600px] object-cover rounded-[40px] shadow-2xl border border-zinc-800" 
+              className="w-full h-64 sm:h-[400px] lg:h-[600px] object-cover rounded-2xl lg:rounded-[40px] shadow-2xl border border-zinc-800" 
             />
           </div>
         </div>
@@ -36,8 +36,8 @@ export default function ProductDetail({ product, onBack, onConfigure }: ProductD
         <div className="flex-1 space-y-12">
           <div>
             <span className="text-blue-500 font-bold uppercase tracking-widest text-xs">{product.category}</span>
-            <h2 className="text-6xl font-black mt-2 mb-6 text-zinc-100 tracking-tighter leading-none">{product.name}</h2>
-            <p className="text-zinc-400 text-xl leading-relaxed">{product.description}</p>
+            <h2 className="text-4xl sm:text-6xl font-black mt-2 mb-6 text-zinc-100 tracking-tighter leading-none">{product.name}</h2>
+            <p className="text-zinc-400 text-lg sm:text-xl leading-relaxed">{product.description}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

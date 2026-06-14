@@ -15,11 +15,11 @@ export default function ProductList({ products, onProductClick, selectedIds = []
     <div>
       <div className="flex justify-between items-end mb-6">
         <div>
-          <h2 className="text-3xl font-bold text-zinc-100">Our Products</h2>
-          <p className="text-zinc-500 mt-1">
+          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-100">Our Products</h2>
+          <p className="text-sm text-zinc-500 mt-1">
             {selectedIds.length > 0 
-              ? `${selectedIds.length} product${selectedIds.length === 1 ? '' : 's'} selected for comparison`
-              : 'Browse our sustainable collection'
+              ? `${selectedIds.length} item${selectedIds.length === 1 ? '' : 's'} selected`
+              : 'Sustainable collection'
             }
           </p>
         </div>

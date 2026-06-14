@@ -34,12 +34,12 @@ export default function ReservationForm({ reservation, onBack, onComplete }: Res
 
   if (isDone) {
     return (
-      <div className="flex flex-col items-center justify-center h-full text-center p-8 bg-zinc-900/50 rounded-3xl border border-zinc-800">
-        <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mb-6 border border-green-500/20">
-          <CheckCircle size={40} className="text-green-500" />
+      <div className="flex flex-col items-center justify-center h-full text-center p-6 sm:p-8 bg-zinc-900/50 rounded-3xl border border-zinc-800">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-500/10 rounded-full flex items-center justify-center mb-6 border border-green-500/20">
+          <CheckCircle size={32} className="text-green-500" />
         </div>
-        <h2 className="text-4xl font-black text-white mb-4">Reservation Confirmed!</h2>
-        <p className="text-zinc-400 text-lg max-w-md">
+        <h2 className="text-2xl sm:text-4xl font-black text-white mb-4">Reservation Confirmed!</h2>
+        <p className="text-zinc-400 text-base sm:text-lg max-w-md">
           Thank you, {formData.name}. Your reservation for the {reservation.product.name} has been received. 
           We'll contact you at {formData.email} shortly.
         </p>
@@ -57,10 +57,10 @@ export default function ReservationForm({ reservation, onBack, onComplete }: Res
         Back to Configuration
       </button>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
         {/* Summary Card */}
-        <div className="bg-zinc-900 p-8 rounded-3xl border border-zinc-800 shadow-2xl h-fit">
-          <h3 className="text-2xl font-black mb-6 flex items-center gap-3">
+        <div className="bg-zinc-900 p-6 sm:p-8 rounded-3xl border border-zinc-800 shadow-2xl h-fit">
+          <h3 className="text-xl sm:text-2xl font-black mb-6 flex items-center gap-3">
             <Calendar className="text-blue-500" />
             Reservation Summary
           </h3>
@@ -89,8 +89,8 @@ export default function ReservationForm({ reservation, onBack, onComplete }: Res
         </div>
 
         {/* Form */}
-        <div className="bg-zinc-950 p-8 rounded-3xl border border-zinc-800 shadow-2xl">
-          <h3 className="text-2xl font-black mb-6">Your Details</h3>
+        <div className="bg-zinc-950 p-6 sm:p-8 rounded-3xl border border-zinc-800 shadow-2xl">
+          <h3 className="text-xl sm:text-2xl font-black mb-6">Your Details</h3>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-xs font-bold uppercase tracking-widest text-zinc-500 mb-2 ml-1">Full Name</label>

@@ -66,9 +66,9 @@ export default function ProductConfigurator({ product, config, onConfigChange, o
         </div>
 
         {/* Right: Configuration Options */}
-        <div className="flex-1 bg-zinc-900/30 border border-zinc-800/50 p-8 lg:p-12 rounded-[40px] backdrop-blur-sm">
+        <div className="flex-1 bg-zinc-900/30 border border-zinc-800/50 p-6 sm:p-8 lg:p-12 rounded-3xl lg:rounded-[40px] backdrop-blur-sm">
           <div className="mb-10">
-            <h2 className="text-4xl font-black text-zinc-100 tracking-tighter">Customize</h2>
+            <h2 className="text-3xl sm:text-4xl font-black text-zinc-100 tracking-tighter">Customize</h2>
             <p className="text-zinc-400 mt-2">Tailor the {product.name} to your specific needs.</p>
           </div>
 

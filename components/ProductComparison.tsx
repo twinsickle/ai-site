@@ -10,13 +10,13 @@ interface ProductComparisonProps {
 export default function ProductComparison({ products, onBack }: ProductComparisonProps) {
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-3xl font-bold text-zinc-100">Product Comparison</h2>
-        <div className="flex gap-4">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-zinc-100">Product Comparison</h2>
+        <div className="flex gap-4 w-full sm:w-auto">
           {onBack && (
             <button 
               onClick={onBack}
-              className="flex items-center gap-2 px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-xl text-zinc-400 hover:text-white hover:border-zinc-700 transition"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-xl text-zinc-400 hover:text-white hover:border-zinc-700 transition"
             >
               <ArrowLeft size={18} />
               Back to Catalog

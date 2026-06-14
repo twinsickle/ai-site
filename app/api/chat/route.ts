@@ -83,9 +83,9 @@ export async function POST(req: Request) {
       .replace('{{CONFIG_STATE}}', configStateString)
       .replace('{{RESERVATION_STATE}}', reservationString);
 
-    // Using gemini-3.5-flash as requested.
+    // Using gemini-3.1-flash-lite as requested.
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-3.5-flash",
+      model: "gemini-3.1-flash-lite",
       systemInstruction: dynamicSystemInstruction,
       generationConfig: {
         responseMimeType: "application/json",
@@ -129,7 +129,7 @@ export async function POST(req: Request) {
         const modelList = availableModels?.length ? availableModels.join(", ") : "None found";
         
         return NextResponse.json({ 
-            content: `I'm having trouble connecting to the Gemini model (gemini-3.5-flash). Your API key currently has access to these models: ${modelList}. Please update the model in 'app/api/chat/route.ts' to one of these.`,
+            content: `I'm having trouble connecting to the Gemini model (gemini-3.1-flash-lite). Your API key currently has access to these models: ${modelList}. Please update the model in 'app/api/chat/route.ts' to one of these.`,
             uiAction: null,
             error: errorMessage
         }, { status: 500 });

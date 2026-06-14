@@ -71,7 +71,7 @@ Once finished, Vercel will provide a public URL (e.g., `eco-shop-ai.vercel.app`)
 
 ## 🛠 Tech Stack
 - **Framework:** Next.js 15 (App Router)
-- **AI Model:** Google Gemini 3.5 Flash (via `@google/generative-ai`)
+- **AI Model:** Google Gemini 3.1 Flash-Lite (via `@google/generative-ai`)
 - **Styling:** Tailwind CSS
 - **Animations:** Framer Motion
 - **Icons:** Lucide React
